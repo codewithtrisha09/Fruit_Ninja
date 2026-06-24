@@ -1,103 +1,120 @@
 # Fruit Ninja AI
 
-A computer vision-based Fruit Ninja game developed using Python, OpenCV, and MediaPipe. The game uses real-time hand tracking to allow players to slice fruits using finger movements captured through a webcam.
+A gesture-recognition-based interactive game leveraging computer vision and hand-tracking technologies. This application captures real-time hand movements via webcam and translates hand gestures into game interactions, enabling gesture-driven fruit-slicing gameplay.
 
-## Features
+## Overview
 
-### Current Features
+Fruit Ninja AI demonstrates the practical application of computer vision in interactive entertainment. The system employs MediaPipe for accurate hand detection and OpenCV for image processing, creating a responsive, real-time user experience that bridges the gap between physical gesture and digital gameplay.
 
-* Real-time hand tracking using MediaPipe
-* Webcam-based gameplay
-* Fruit slicing through gesture detection
-* Multiple fruit types:
+## Core Features
 
-  * Apple
-  * Banana
-  * Mango
-  * Orange
-  * Watermelon
-* Real-time score tracking
+- **Real-Time Hand Tracking**: Precise hand detection and position tracking using MediaPipe's hand pose estimation
+- **Gesture-Based Interaction**: Finger-based gesture recognition for fruit slicing mechanics
+- **Dynamic Fruit Variety**: Support for multiple fruit types including apples, bananas, mangoes, oranges, and watermelons
+- **Live Score Tracking**: Real-time score calculation and display during gameplay
+- **Webcam Integration**: Seamless webcam input handling for gesture capture
 
-## Technologies Used
+## Technical Stack
 
-* Python
-* OpenCV
-* MediaPipe
-* NumPy
+| Component | Technology |
+|-----------|-----------|
+| Language | Python 3.x |
+| Computer Vision | OpenCV |
+| Hand Detection | MediaPipe |
+| Numerical Computing | NumPy |
 
-## Installation
+## Getting Started
 
-Clone the repository:
+### Prerequisites
 
+- Python 3.7 or higher
+- Functional webcam
+- Stable internet connection (for MediaPipe model downloads)
+
+### Installation
+
+1. Clone the repository:
 ```bash
 git clone https://github.com/codewithtrisha09/Fruit_Ninja.git
 cd Fruit_Ninja
 ```
 
-Install dependencies:
-
+2. Install required dependencies:
 ```bash
 pip install opencv-python mediapipe numpy
 ```
 
-Run the game:
-
+3. Launch the application:
 ```bash
 python hand.py
 ```
 
-## Controls
+## Usage
 
-Move your hand in front of the webcam and use your index finger to slice fruits.
+- **Gameplay**: Position your hand in front of the webcam. Use your index finger to perform slicing gestures across fruits.
+- **Exit Game**: Press `Ctrl + Q` to terminate the application.
 
-To close the game:
+## Planned Enhancements
 
-```text
-Ctrl + Q
-```
+### Game Mechanics
+- **Bomb Detection System**: Random bomb spawning with collision penalties. Three bomb hits trigger game over.
+- **Miss Tracking**: Three missed fruits result in game termination.
+- **Combo Scoring**: Bonus points for consecutive fruit slices without misses.
 
-## Planned Updates
+### Persistence & Leaderboard
+- Persistent high-score storage and retrieval
+- Automatic score saving upon game completion
+- Leaderboard functionality with ranked scoring
 
-The following features are currently under development:
+### User Experience
+- Audio feedback system with sound effects
+- Progressive difficulty scaling
+- Pause and resume functionality
+- Game-over screen with score summary
+- Enhanced animation and visual effects
 
-### Bomb System
+## Project Objectives
 
-* Bombs will appear randomly among fruits.
-* Hitting a bomb counts as a penalty.
-* If a bomb is hit more than three times, the game ends.
+This project was developed to explore and implement:
 
-### High Score Storage
+- Computer vision techniques and real-time image processing
+- Hand gesture recognition and pose estimation
+- Interactive applications leveraging human-computer interaction
+- Game development principles and mechanics
 
-* Persistent high-score tracking.
-* Automatic saving of best scores.
-* High-score display on startup.
+## Architecture
 
-### Miss Counter
+The application consists of:
 
-* Missing a fruit counts as one strike.
-* Missing more than three fruits results in a game over.
+- **Hand Detection Module**: Leverages MediaPipe for keypoint extraction and hand state inference
+- **Game Engine**: Manages fruit spawning, collision detection, and scoring logic
+- **Rendering Pipeline**: Handles webcam frame capture and game state visualization
+- **Input Processing**: Translates hand coordinates into game commands
 
-### Additional Improvements
+## System Requirements
 
-* Sound effects
-* Combo scoring system
-* Difficulty levels
-* Improved animations
-* Pause and restart functionality
-* Game-over screen
-* Leaderboard support
+- Minimum 4GB RAM
+- 1.5 GHz processor or faster
+- 50MB disk space
+- Standard USB webcam or built-in laptop camera
 
-## Project Goals
+## Contributing
 
-This project was developed to explore:
+Contributions are welcome. Please follow standard Git workflows:
 
-* Computer Vision
-* Hand Gesture Recognition
-* Real-Time Image Processing
-* Interactive Game Development
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/enhancement`)
+3. Commit changes with descriptive messages
+4. Push to the branch and submit a pull request
 
 ## Author
 
-Trisha Shetty
+**Trisha Shetty**
 
-GitHub: https://github.com/codewithtrisha09
+GitHub: [@codewithtrisha09](https://github.com/codewithtrisha09)
+
+For questions or feedback, please open an issue on the repository.
+
+---
+
+**Last Updated**: June 2026
