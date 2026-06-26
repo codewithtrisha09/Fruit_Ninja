@@ -1,120 +1,185 @@
 # Fruit Ninja AI
 
-A gesture-recognition-based interactive game leveraging computer vision and hand-tracking technologies. This application captures real-time hand movements via webcam and translates hand gestures into game interactions, enabling gesture-driven fruit-slicing gameplay.
+An AI-powered gesture-controlled gaming application that transforms real-time hand movements into interactive gameplay using computer vision and hand-tracking technologies. By leveraging MediaPipe and OpenCV, the system enables users to slice virtual fruits through natural hand gestures, creating an immersive touchless gaming experience.
 
 ## Overview
 
-Fruit Ninja AI demonstrates the practical application of computer vision in interactive entertainment. The system employs MediaPipe for accurate hand detection and OpenCV for image processing, creating a responsive, real-time user experience that bridges the gap between physical gesture and digital gameplay.
+Fruit Ninja AI showcases the integration of computer vision, real-time image processing, and human-computer interaction in game development. The application tracks hand landmarks through a webcam feed and maps finger movements to in-game actions, allowing players to interact with the game without traditional input devices.
 
-## Core Features
+The project demonstrates how modern AI-based vision systems can be applied to create intuitive and engaging user experiences.
 
-- **Real-Time Hand Tracking**: Precise hand detection and position tracking using MediaPipe's hand pose estimation
-- **Gesture-Based Interaction**: Finger-based gesture recognition for fruit slicing mechanics
-- **Dynamic Fruit Variety**: Support for multiple fruit types including apples, bananas, mangoes, oranges, and watermelons
-- **Live Score Tracking**: Real-time score calculation and display during gameplay
-- **Webcam Integration**: Seamless webcam input handling for gesture capture
+---
 
-## Technical Stack
+## Key Features
 
-| Component | Technology |
-|-----------|-----------|
-| Language | Python 3.x |
+### Real-Time Hand Tracking
+- Accurate hand landmark detection using MediaPipe Hands
+- Low-latency gesture processing for smooth gameplay
+- Robust tracking under varying hand positions
+
+### Gesture-Based Fruit Slicing
+- Converts finger movements into virtual slicing actions
+- Natural and intuitive gameplay without keyboards or controllers
+- Real-time collision detection between gestures and fruits
+
+### Dynamic Gameplay
+- Multiple fruit categories including apples, bananas, oranges, mangoes, and watermelons
+- Randomized fruit spawning for varied gameplay sessions
+- Continuous score tracking and performance feedback
+
+### Webcam-Powered Interaction
+- Live video stream processing using OpenCV
+- Seamless integration between computer vision and game mechanics
+- Fully touchless gaming experience
+
+---
+
+## Technology Stack
+
+| Category | Technology |
+|-----------|------------|
+| Programming Language | Python |
 | Computer Vision | OpenCV |
-| Hand Detection | MediaPipe |
+| Hand Tracking | MediaPipe |
 | Numerical Computing | NumPy |
 
-## Getting Started
+---
+
+## Installation
 
 ### Prerequisites
 
-- Python 3.7 or higher
-- Functional webcam
-- Stable internet connection (for MediaPipe model downloads)
+- Python 3.7+
+- Webcam-enabled device
+- Internet connection (for initial MediaPipe model setup)
 
-### Installation
+### Setup
 
-1. Clone the repository:
+Clone the repository:
+
 ```bash
 git clone https://github.com/codewithtrisha09/Fruit_Ninja.git
 cd Fruit_Ninja
 ```
 
-2. Install required dependencies:
+Install dependencies:
+
 ```bash
 pip install opencv-python mediapipe numpy
 ```
 
-3. Launch the application:
+Run the application:
+
 ```bash
 python hand.py
 ```
 
-## Usage
+---
 
-- **Gameplay**: Position your hand in front of the webcam. Use your index finger to perform slicing gestures across fruits.
-- **Exit Game**: Press `Ctrl + Q` to terminate the application.
+## How It Works
 
-## Planned Enhancements
+1. The webcam captures live video frames.
+2. MediaPipe detects and tracks hand landmarks in real time.
+3. Fingertip coordinates are extracted from detected hand landmarks.
+4. Movement trajectories are interpreted as slicing gestures.
+5. Collision detection determines whether fruits have been successfully sliced.
+6. Scores are updated and displayed dynamically during gameplay.
 
-### Game Mechanics
-- **Bomb Detection System**: Random bomb spawning with collision penalties. Three bomb hits trigger game over.
-- **Miss Tracking**: Three missed fruits result in game termination.
-- **Combo Scoring**: Bonus points for consecutive fruit slices without misses.
+---
 
-### Persistence & Leaderboard
-- Persistent high-score storage and retrieval
-- Automatic score saving upon game completion
-- Leaderboard functionality with ranked scoring
+## System Architecture
 
-### User Experience
-- Audio feedback system with sound effects
-- Progressive difficulty scaling
+### Hand Tracking Module
+Responsible for detecting hands and extracting landmark coordinates using MediaPipe's hand pose estimation framework.
+
+### Gesture Recognition Engine
+Processes fingertip movement patterns and translates them into slicing actions.
+
+### Game Engine
+Handles fruit spawning, collision detection, scoring logic, and gameplay mechanics.
+
+### Rendering System
+Combines webcam frames with game elements and visual overlays for real-time display.
+
+---
+
+## Future Enhancements
+
+### Advanced Gameplay Features
+- Bomb objects with penalty mechanics
+- Combo-based scoring system
+- Increasing difficulty levels
+- Limited lives and game-over conditions
+
+### Data Persistence
+- High-score storage and retrieval
+- Local leaderboard functionality
+- Session statistics tracking
+
+### User Experience Improvements
+- Sound effects and background music
+- Enhanced animations and visual effects
 - Pause and resume functionality
-- Game-over screen with score summary
-- Enhanced animation and visual effects
+- End-game performance analytics
 
-## Project Objectives
+### AI Enhancements
+- Multi-hand gesture support
+- Gesture classification using machine learning models
+- Adaptive difficulty based on player performance
 
-This project was developed to explore and implement:
+---
 
-- Computer vision techniques and real-time image processing
-- Hand gesture recognition and pose estimation
-- Interactive applications leveraging human-computer interaction
-- Game development principles and mechanics
+## Learning Outcomes
 
-## Architecture
+Through this project, the following concepts were explored and implemented:
 
-The application consists of:
+- Real-time computer vision applications
+- Hand landmark detection and tracking
+- Gesture recognition systems
+- Human-computer interaction (HCI)
+- Game development fundamentals
+- Real-time event processing and rendering
 
-- **Hand Detection Module**: Leverages MediaPipe for keypoint extraction and hand state inference
-- **Game Engine**: Manages fruit spawning, collision detection, and scoring logic
-- **Rendering Pipeline**: Handles webcam frame capture and game state visualization
-- **Input Processing**: Translates hand coordinates into game commands
+---
 
 ## System Requirements
 
-- Minimum 4GB RAM
-- 1.5 GHz processor or faster
-- 50MB disk space
-- Standard USB webcam or built-in laptop camera
+- 4 GB RAM or higher
+- Dual-core processor (1.5 GHz+)
+- Webcam (built-in or external)
+- Approximately 50 MB of available storage
+
+---
 
 ## Contributing
 
-Contributions are welcome. Please follow standard Git workflows:
+Contributions, feature suggestions, and bug reports are welcome.
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/enhancement`)
-3. Commit changes with descriptive messages
-4. Push to the branch and submit a pull request
+2. Create a feature branch
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Add feature"
+```
+
+4. Push to your branch and create a Pull Request
+
+---
 
 ## Author
 
 **Trisha Shetty**
 
-GitHub: [@codewithtrisha09](https://github.com/codewithtrisha09)
+GitHub: https://github.com/codewithtrisha09
 
-For questions or feedback, please open an issue on the repository.
+If you find this project useful, consider starring the repository and sharing feedback through Issues.
 
 ---
 
-**Last Updated**: June 2026
+*Built using Computer Vision, AI-powered Hand Tracking, and Real-Time Gesture Recognition.*
