@@ -1,3 +1,7 @@
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green)
+![MediaPipe](https://img.shields.io/badge/MediaPipe-Hand%20Tracking-orange)
+
 # Fruit Ninja AI
 
 An AI-powered gesture-controlled gaming application that transforms real-time hand movements into interactive gameplay using computer vision and hand-tracking technologies. By leveraging MediaPipe and OpenCV, the system enables users to slice virtual fruits through natural hand gestures, creating an immersive touchless gaming experience.
